@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "HSBC Support | Live Chat",
   description: "Secure, fast live chat support for HSBC.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
