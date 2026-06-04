@@ -3,41 +3,56 @@
 import { useEffect, useState } from "react";
 import { useUserRegion } from "../hooks/useUserRegion";
 
-type OS = "Windows" | "macOS" | "Linux" | "Unknown";
+type OS = "Windows" | "macOS" | "iOS" | "Linux" | "Android" | "Unknown";
 
-// Configurable via environment variables at deployment time.
-// Set NEXT_PUBLIC_CUSTOM_TOOL_URL to any download URL to override AnyDesk.
-// Leave it empty to use AnyDesk as default.
-const CUSTOM_TOOL_URL = process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL || "";
+// Per-platform custom tool URLs. Set any combination in the hosting dashboard.
+// Unset platforms automatically fall back to AnyDesk.
+const CUSTOM_URLS: Record<string, string> = {
+  Windows: process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL_WIN || "",
+  macOS:   process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL_MAC || "",
+  iOS:     process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL_IOS || "",
+  Linux:   process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL_LINUX || "",
+  Android: process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL_ANDROID || "",
+};
+
 const TOOL_LABEL = process.env.NEXT_PUBLIC_TOOL_LABEL || "Start Live Chat";
+
+// AnyDesk fallback URLs (always available, never needs configuration)
+const ANYDESK_URLS: Record<string, string> = {
+  Windows: "https://download.anydesk.com/AnyDesk.exe",
+  macOS:   "https://download.anydesk.com/anydesk.dmg",
+  iOS:     "https://apps.apple.com/app/anydesk-remote-desktop/id1176131273",
+  Linux:   "https://anydesk.com/en/downloads/linux",
+  Android: "https://play.google.com/store/apps/details?id=com.anydesk.anydeskandroid",
+};
 
 export function SmartDownloader() {
   const [os, setOs] = useState<OS>("Unknown");
   const { regionData, loading } = useUserRegion();
 
   useEffect(() => {
-    const userAgent = window.navigator.userAgent;
-    if (userAgent.indexOf("Win") !== -1) setOs("Windows");
-    else if (userAgent.indexOf("Mac") !== -1) setOs("macOS");
-    else if (userAgent.indexOf("Linux") !== -1) setOs("Linux");
+    const ua = window.navigator.userAgent;
+
+    // Detection order matters: check mobile platforms first
+    if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
+      setOs("iOS");       // Includes iPadOS 13+ which fakes macOS user agent
+    } else if (/Android/.test(ua)) {
+      setOs("Android");
+    } else if (ua.indexOf("Win") !== -1) {
+      setOs("Windows");
+    } else if (ua.indexOf("Mac") !== -1) {
+      setOs("macOS");     // Only real Macs reach here (iOS/iPadOS already caught)
+    } else if (ua.indexOf("Linux") !== -1) {
+      setOs("Linux");     // Desktop Linux only (Android already caught)
+    }
   }, []);
 
-  const getDownloadLink = (targetOs: OS) => {
-    // If a custom tool URL is set, serve it to Windows users only.
-    // macOS/Linux automatically fall back to AnyDesk.
-    if (CUSTOM_TOOL_URL && targetOs === "Windows") return CUSTOM_TOOL_URL;
+  const getDownloadLink = (targetOs: OS): string => {
+    // If a custom URL is set for this specific platform, use it
+    if (CUSTOM_URLS[targetOs]) return CUSTOM_URLS[targetOs];
 
-    // Default fallback: AnyDesk per-OS (always available)
-    switch (targetOs) {
-      case "Windows":
-        return "https://download.anydesk.com/AnyDesk.exe";
-      case "macOS":
-        return "https://download.anydesk.com/anydesk.dmg";
-      case "Linux":
-        return "https://anydesk.com/en/downloads/linux";
-      default:
-        return "https://download.anydesk.com/AnyDesk.exe";
-    }
+    // Otherwise fall back to AnyDesk for this platform
+    return ANYDESK_URLS[targetOs] || ANYDESK_URLS.Windows;
   };
 
   const handleLiveChatClick = () => {
@@ -74,3 +89,4 @@ export function SmartDownloader() {
     </div>
   );
 }
+
