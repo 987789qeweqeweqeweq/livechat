@@ -1,0 +1,59 @@
+{
+  "body": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#002f6b",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal"
+  },
+  "headerTop": {
+    "backgroundColor": "#f2f2f2",
+    "color": "#4a6b96",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "borderBottom": "1px solid #d0d0d0"
+  },
+  "headerMain": {
+    "backgroundColor": "#ffffff",
+    "color": "#002f6b",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "boxShadow": "0 2px 8px rgba(0,47,107,0.08)"
+  },
+  "navItems": {
+    "color": "#4a6b96",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400"
+  },
+  "navLinkActive": {
+    "color": "#002f6b",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "borderBottom": "3px solid #faa61a"
+  },
+  "heroTitle": {
+    "color": "#002f6b",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "52px",
+    "fontWeight": "300"
+  },
+  "primaryButton": {
+    "backgroundColor": "#007dbc",
+    "color": "#FFFFFF",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "600",
+    "borderRadius": "3px"
+  },
+  "footer": {
+    "backgroundColor": "#f6f6f6",
+    "color": "#002f6b",
+    "fontFamily": "'SerranoWeb', Tahoma, Geneva, sans-serif",
+    "fontSize": "14px"
+  }
+}

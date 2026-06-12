@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* ===== BNZ SerranoWeb Font Family ===== */
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SerranoWeb';
+  src: url('/fonts/SerranoWeb-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== BNZ Design Tokens ===== */
+@theme inline {
+  /* Primary brand colors */
+  --color-bnz-deep-blue: #002f6b;
+  --color-bnz-mid-blue: #007dbc;
+  --color-bnz-mid-blue-hover: #005f8f;
+  --color-bnz-green: #20882e;
+  --color-bnz-green-hover: #186b22;
+  --color-bnz-gold: #faa61a;
+  --color-bnz-gold-hover: #e09010;
+  --color-bnz-midnight: #00152f;
+
+  /* Neutral palette */
+  --color-bnz-white: #ffffff;
+  --color-bnz-black: #1a1a1a;
+  --color-bnz-text: #002f6b;
+  --color-bnz-text-muted: #4a6b96;
+  --color-bnz-header-bg: #f2f2f2;
+  --color-bnz-footer-bg: #f6f6f6;
+  --color-bnz-border: #d0d0d0;
+  --color-bnz-input-border: #7a97bd;
+  --color-bnz-card-bg: #f8f9fb;
+}
+
+body {
+  font-family: 'SerranoWeb', Tahoma, Geneva, sans-serif;
+  background-color: var(--color-bnz-white);
+  color: var(--color-bnz-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
