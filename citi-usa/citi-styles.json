@@ -1,0 +1,61 @@
+{
+  "source": "citigroup.com live CSS variables (extracted via Puppeteer)",
+  "tokens": {
+    "--citi-blue": "#002d72",
+    "--citi-blue-100": "#005FF1",
+    "--citi-blue-200": "#0041A5",
+    "--citi-blue-300": "#002D72",
+    "--citi-cyan": "#00BDF2",
+    "--citi-red": "#f00",
+    "--gray-950": "#10161D",
+    "--gray-150": "#D9E2EA",
+    "--gray-450": "#7795B4",
+    "footer-background-computed": "rgb(15, 22, 50)",
+    "body-background-computed": "rgb(246, 248, 250)",
+    "body-font": "Citi-Sans-Text-Regular"
+  },
+  "body": {
+    "backgroundColor": "#F6F8FA",
+    "color": "#10161D",
+    "fontFamily": "'Citi-Sans-Text-Regular', 'Citi Sans', Arial, Helvetica, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal"
+  },
+  "headerUtilityBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#7795B4",
+    "fontSize": "12.5px",
+    "borderBottom": "1px solid #D9E2EA"
+  },
+  "headerMain": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#002d72",
+    "fontSize": "13.5px",
+    "boxShadow": "0 2px 10px rgba(0,45,114,0.10)"
+  },
+  "navItemActive": {
+    "color": "#002d72",
+    "fontWeight": "600",
+    "borderBottom": "3px solid #005FF1"
+  },
+  "navItemHover": {
+    "color": "#005FF1",
+    "borderBottom": "3px solid rgba(0,95,241,0.5)"
+  },
+  "primaryButton": {
+    "backgroundColor": "#005FF1",
+    "color": "#FFFFFF",
+    "fontSize": "13.5px",
+    "fontWeight": "600",
+    "borderRadius": "4px"
+  },
+  "footer": {
+    "backgroundColor": "#0F1632",
+    "color": "#FFFFFF",
+    "columnHeaderFontSize": "11px",
+    "columnHeaderTracking": "0.12em",
+    "linkColor": "rgba(255,255,255,0.55)",
+    "legalTextColor": "rgba(255,255,255,0.30)"
+  }
+}

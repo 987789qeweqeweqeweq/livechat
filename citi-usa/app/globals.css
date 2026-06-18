@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ===== Interstate Font Family (Citi's official web font) ===== */
+@font-face {
+  font-family: 'Interstate';
+  src: url('/fonts/Interstate-Light.woff2') format('woff2'),
+       url('/fonts/Interstate-Light.eot') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Interstate';
+  src: url('/fonts/Interstate-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Interstate';
+  src: url('/fonts/Interstate-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Interstate';
+  src: url('/fonts/Interstate-Bold.woff2') format('woff2'),
+       url('/fonts/Interstate-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Citi Design Tokens (sourced from live citigroup.com CSS variables) ===== */
+@theme inline {
+  /* Primary brand blues */
+  --color-citi-navy: #002d72;        /* --citi-blue: deep brand navy, text/headings */
+  --color-citi-blue: #005FF1;        /* --citi-blue-100: interactive/CTA blue */
+  --color-citi-blue-hover: #0041A5;  /* --citi-blue-200: hover state */
+  --color-citi-blue-dark: #002D72;   /* --citi-blue-300: alias for deep navy */
+  --color-citi-arc: #FF3C28;         /* iconic arc red (from SVG) */
+  --color-citi-arc-hover: #E02B1A;
+  --color-citi-cyan: #00BDF2;        /* --citi-cyan: accent */
+
+  /* Neutrals (from --gray-* vars) */
+  --color-citi-white: #FFFFFF;
+  --color-citi-text: #10161D;        /* --gray-950: dark body text */
+  --color-citi-text-secondary: #7795B4; /* --gray-450: muted blue-gray */
+  --color-citi-gray-bg: #F6F8FA;     /* actual body background of citi sites */
+  --color-citi-gray-border: #D9E2EA; /* --gray-150: borders */
+  --color-citi-input-border: #7795B4;
+  --color-citi-footer: #0F1632;      /* actual footer background (rgb 15,22,50) */
+
+  /* Tint */
+  --color-citi-sky: #CCEAF7;         /* --citi-blue-200-tint-20 */
+}
+
+body {
+  font-family: 'Interstate', Arial, Helvetica, sans-serif;
+  background-color: var(--color-citi-gray-bg);
+  color: var(--color-citi-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
