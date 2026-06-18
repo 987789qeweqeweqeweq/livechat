@@ -93,7 +93,7 @@ export default function Home() {
             {/* Social icons */}
             <div className="flex items-center gap-3">
               {/* Twitter / X */}
-              <a href="https://twitter.com/Citi" target="_blank" rel="noopener noreferrer" aria-label="Citi on X (Twitter)"
+              <a href="https://x.com/Citi" target="_blank" rel="noopener noreferrer" aria-label="Citi on X (Twitter)"
                 className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 transition-colors">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-white/70">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zM17.083 19.77h1.833L7.084 4.126H5.117L17.083 19.77z" />
@@ -114,7 +114,7 @@ export default function Home() {
                 </svg>
               </a>
               {/* YouTube */}
-              <a href="https://www.youtube.com/user/Citi" target="_blank" rel="noopener noreferrer" aria-label="Citi on YouTube"
+              <a href="https://www.youtube.com/citi" target="_blank" rel="noopener noreferrer" aria-label="Citi on YouTube"
                 className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 transition-colors">
                 <svg width="15" height="11" viewBox="0 0 24 17" fill="currentColor" className="text-white/70">
                   <path d="M23.495 2.205A3.026 3.026 0 0 0 21.435.142C19.56-.387 12 0 12 0S4.44-.387 2.565.142A3.026 3.026 0 0 0 .505 2.205C0 4.09 0 8.001 0 8.001s0 3.91.505 5.796a3.026 3.026 0 0 0 2.06 2.063C4.44 16.389 12 16.389 12 16.389s7.56 0 9.435-.529a3.026 3.026 0 0 0 2.06-2.063C24 11.912 24 8 24 8s0-3.91-.505-5.795zm-14.233 9.33V5.46l6.328 3.037-6.328 3.038z" />
@@ -142,7 +142,7 @@ export default function Home() {
                 {[
                   "Credit Cards",
                   "Banking",
-                  "Mortgages",
+                  "Mortgage",
                   "Personal Loans",
                   "Investing",
                   "Small Business",
@@ -275,7 +275,7 @@ export default function Home() {
 
             {/* Disclaimer */}
             <p className="text-[11px] text-white/30 leading-relaxed max-w-[900px]">
-              © {new Date().getFullYear()} Citigroup Inc. Citi, Citi and Arc Design and other marks used herein are
+              © {new Date().getFullYear()} Citigroup Inc. All Rights Reserved. Citi, Citi and Arc Design and other marks used herein are
               service marks of Citigroup Inc. or its affiliates, used and registered throughout the world.{" "}
               {loading ? "Citibank, N.A." : regionData.legalEntityName} Member FDIC. Equal Housing Lender. Banking
               products and services are provided by Citibank, N.A. Your use of this website is subject to the terms

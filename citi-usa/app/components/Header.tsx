@@ -4,16 +4,16 @@ import Image from "next/image";
 import { useState } from "react";
 import { useUserRegion } from "../hooks/useUserRegion";
 
-type NavItem = "Credit Cards" | "Banking" | "Mortgages" | "Personal Loans" | "Investing" | "Small Business" | "Wealth";
+type NavItem = "Credit Cards" | "Banking" | "Mortgage" | "Personal Loans" | "Investing" | "Small Business" | "Wealth Management";
 
 const NAV_ITEMS: NavItem[] = [
   "Credit Cards",
   "Banking",
-  "Mortgages",
+  "Mortgage",
   "Personal Loans",
   "Investing",
   "Small Business",
-  "Wealth",
+  "Wealth Management",
 ];
 
 export function Header() {

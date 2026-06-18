@@ -14,8 +14,8 @@ export const REGIONS: Record<RegionCode, RegionData> = {
   US: {
     code: "US",
     countryName: "United States",
-    supportPhone: "1-888-248-4226",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    supportPhone: "1-800-374-9700",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our U.S. support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -24,7 +24,7 @@ export const REGIONS: Record<RegionCode, RegionData> = {
     code: "UK",
     countryName: "United Kingdom",
     supportPhone: "+44-20-7500-1433",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our international support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -33,7 +33,7 @@ export const REGIONS: Record<RegionCode, RegionData> = {
     code: "AU",
     countryName: "Australia",
     supportPhone: "+61-2-8225-0615",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our international support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -42,7 +42,7 @@ export const REGIONS: Record<RegionCode, RegionData> = {
     code: "HK",
     countryName: "Hong Kong",
     supportPhone: "+852-2860-0333",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our international support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -51,7 +51,7 @@ export const REGIONS: Record<RegionCode, RegionData> = {
     code: "IN",
     countryName: "India",
     supportPhone: "+91-22-4955-2484",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our international support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -60,7 +60,7 @@ export const REGIONS: Record<RegionCode, RegionData> = {
     code: "CA",
     countryName: "Canada",
     supportPhone: "+1-888-248-4226",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our Canadian support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
@@ -68,8 +68,8 @@ export const REGIONS: Record<RegionCode, RegionData> = {
   GLOBAL: {
     code: "GLOBAL",
     countryName: "Global",
-    supportPhone: "1-888-248-4226",
-    termsUrl: "https://online.citi.com/US/ag/userAgreement",
+    supportPhone: "1-800-374-9700",
+    termsUrl: "https://www.citi.com/tandc",
     heroSubtitle: "Connect with our global support team instantly.",
     brandName: "Citi",
     legalEntityName: "Citibank, N.A."
