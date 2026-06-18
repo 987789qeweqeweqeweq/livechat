@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Citi | Live Chat Support",
   description: "Secure live chat support for Citi customers.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
