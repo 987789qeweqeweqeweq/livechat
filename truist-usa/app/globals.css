@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'TruistTrio';
+  src: url('/Fonts/TruistTrioVF_W_Wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@theme inline {
+  --color-truist-purple: #2E1A47;
+  --color-truist-purple-hover: #3D2660;
+  --color-truist-text: rgb(51, 51, 51);
+  --color-truist-white: #ffffff;
+  --color-truist-gray-border: #CCCCCC;
+  --color-truist-gray-bg: #F5F5F5;
+}
+
+body {
+  font-family: 'TruistTrio', sans-serif;
+  background-color: var(--color-truist-white);
+  color: var(--color-truist-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
