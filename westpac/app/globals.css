@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* ===== Westpac National2Web Font Family ===== */
+@font-face {
+  font-family: 'National2Web';
+  src: url('/fonts/national-2-web-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2Web';
+  src: url('/fonts/national-2-web-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Westpac Design Tokens ===== */
+@theme inline {
+  /* Primary brand colors */
+  --color-westpac-red: #D5002B;
+  --color-westpac-red-hover: #b80024;
+  --color-westpac-navy: #1B1464;
+  --color-westpac-navy-hover: #150f4e;
+  --color-westpac-midnight: #0d0a3a;
+
+  /* Neutral palette */
+  --color-westpac-white: #ffffff;
+  --color-westpac-black: #1a1a1a;
+  --color-westpac-text: #1B1464;
+  --color-westpac-text-muted: #6b6f8f;
+  --color-westpac-header-bg: #f5f5f5;
+  --color-westpac-footer-bg: #f5f5f5;
+  --color-westpac-border: #d0d0d0;
+  --color-westpac-input-border: #9ea3c0;
+  --color-westpac-card-bg: #f8f9fb;
+}
+
+body {
+  font-family: 'National2Web', Arial, Helvetica, sans-serif;
+  background-color: var(--color-westpac-white);
+  color: var(--color-westpac-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
